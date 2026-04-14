@@ -1,4 +1,4 @@
 export default interface HamburgerMenuHookProperties {
-    isOpen: boolean;
+    isToggled: boolean;
     toggle: () => void;
 }

@@ -2,15 +2,14 @@ import type {JSX} from "react";
 import glassmorphism from "../../helperFunctions/glassmorphism.ts";
 import {SiGithub} from "@icons-pack/react-simple-icons";
 import {AtSign, Earth, FileText} from "lucide-react";
-import type ToastQueueProperties from "../../interfaces/props/ToastQueueProperties.ts";
-import UseToastQueue from "../../hooks/UseToastQueue.tsx";
+import useToastQueue from "../../hooks/UseToastQueue.ts";
 
 export default function CriticalInfo(): JSX.Element {
-    const toastQueue: ToastQueueProperties = UseToastQueue();
+    const addToast = useToastQueue((state => state.addToast));
     async function copyEmailToClipboard(): Promise<void> {
         console.log("Copy email to clipboard");
         await navigator.clipboard.writeText("wasilewski.pawel2007@gmail.com");
-        toastQueue.addToast("success", "Email address copied to clipboard!", 5000);
+        addToast("success", "Email address copied to clipboard!", 5000);
     }
 
     return (<section
