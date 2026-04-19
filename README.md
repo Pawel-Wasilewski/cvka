@@ -7,7 +7,7 @@ Krótki projekt portfolio prezentujący:
 - wybrane projekty,
 - szybki kontakt i pobieranie CV.
 
-## Uzżte technologie
+## Użyte technologie
 
 - React 19
 - TypeScript
