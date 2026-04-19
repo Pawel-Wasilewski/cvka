@@ -3,7 +3,7 @@ import type {ProjectInfoProps} from "../../interfaces/props/ProjectInfoProp.ts";
 import glassmorphism from "../../helperFunctions/glassmorphism.ts";
 
 export default function AboutProjectsModal(prop: ProjectInfoProps): JSX.Element {
-    return (<section className={glassmorphism + "w-full ml-4 mr-4"}>
+    return (<section className={`${glassmorphism} mx-4 w-full`}>
         <img src={prop.imageUrl ?? "#"} alt={prop.title} className={"w-full h-48 object-cover rounded-t-lg"}/>
         <div className={"p-4"}>
             <h2 className={"text-xl font-bold mb-2"}>{prop.title}</h2>

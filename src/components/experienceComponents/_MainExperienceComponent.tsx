@@ -27,8 +27,9 @@ export default function _MainExperienceComponent(): JSX.Element {
         }
     ]
 
-    return (<div className={glassmorphism + "margin-auto mt-10 p-8 rounded-lg w-2/3 flex flex-row gap-10 justify-between flex-wrap"}>
-        <h1 className={"text-3xl text-gray-100 font-bold antialiased font-primary"}> Experience </h1>
+    return (<div
+        className={`${glassmorphism} mx-auto mt-6 flex w-[92%] max-w-5xl flex-col gap-6 rounded-2xl p-4 sm:mt-8 sm:p-6 md:p-8`}>
+        <h1 className={"font-primary text-2xl font-bold text-gray-100 antialiased sm:text-3xl"}> Experience </h1>
 
         {experience.map((firmDescription: FirmDescripctionProp, index: number): JSX.Element => (
             <FirmDescriptionModal firmName={firmDescription.firmName} fromXToY={firmDescription.fromXToY} jobPosition={firmDescription.jobPosition} summaryOfKnowledgeGained={firmDescription.summaryOfKnowledgeGained} key={index}/>

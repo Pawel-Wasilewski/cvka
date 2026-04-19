@@ -8,3 +8,9 @@
 @theme {
     --font-primary: "Datatype", sans-serif;
 }
+
+html,
+body,
+#root {
+    overflow-x: hidden;
+}

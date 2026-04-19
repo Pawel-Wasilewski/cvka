@@ -2,6 +2,7 @@ import {type JSX, useState} from "react";
 import type {ProjectInfoProps} from "../../interfaces/props/ProjectInfoProp.ts";
 import MiniTechIconModal from "../helperComponents/MiniTechIconModal.tsx";
 import {ArrowLeft, ArrowRight} from "lucide-react";
+import {AnimatePresence, motion} from "framer-motion";
 
 export default function ProjectCarosell(): JSX.Element {
     const [currentProjectIndex, setCurrentProjectIndex] = useState<number>(0);
@@ -17,7 +18,7 @@ export default function ProjectCarosell(): JSX.Element {
                 "MAUI",
                 "C#"
             ],
-            projectUrl: null
+            projectUrl: "https://github.com/Pawel-Wasilewski/AIStoryTeller"
         },
         {
             projectStatus: "Completed",
@@ -29,7 +30,7 @@ export default function ProjectCarosell(): JSX.Element {
                 "React",
                 "TypeScript",
             ],
-            projectUrl: null
+            projectUrl: "https://github.com/Pawel-Wasilewski/RobotSteering"
         },
         {
             projectStatus: "Completed",
@@ -46,25 +47,13 @@ export default function ProjectCarosell(): JSX.Element {
         },
         {
             projectStatus: "Completed",
-            title: "DistTs",
-            imageUrl: null,
-            description: "TypeScript based Discord bot for managing a Discord server. The bot has various features such as moderation, music playback, and fun commands.",
+            title: "ZS10 Website",
+            imageUrl: "abc",
+            description: "Wordpress Site for my school co-created with others.",
             technologies: [
-                "TypeScript"
+                "Wordpress",
             ],
-            projectUrl: null
-        },
-        {
-            projectStatus: "Completed",
-            title: "GwentGameCalculator",
-            imageUrl: null,
-            description: "React Native app for calculating the score of a Gwent game. The app allows users to input the cards played by both players and calculates the score based on the rules of the game.",
-            technologies: [
-                "ReactNative",
-                "React",
-                "TypeScript",
-            ],
-            projectUrl: null
+            projectUrl: "https://www.zs10.zabrze.pl/"
         }
     ]
 
@@ -78,31 +67,50 @@ export default function ProjectCarosell(): JSX.Element {
         setCurrentProjectIndex((prevIndex: number): number => (prevIndex + 1) % projects.length);
     }
 
-    return (<section className={"flex flex-row justify-between w-full h-full ml-4 mr-4"}>
-        <div className={"w-1/5 h-full flex items-center justify-center"}>
+    return (<section className={"flex h-full w-full min-w-0 flex-col gap-4 overflow-hidden sm:gap-5 md:flex-row md:items-center md:justify-between"}>
+        <div className={"order-2 flex shrink-0 items-center justify-center md:order-1 md:w-1/6"}>
             <ArrowLeft
-                size={75}
+                size={42}
                 className={"text-gray-100 cursor-pointer antialiased hover:text-gray-300 transition-colors duration-500 shadow-black"}
                 onClick={handleLeftArrowClick}
             />
         </div>
-        <section className={"w-3/5 h-full flex flex-col"}>
-            <img src={currentProject.imageUrl!} alt={currentProject.title} className={"w-full h-48 object-cover rounded-t-lg"}/>
-            <div className={"p-4"}>
-                <h2 className={"text-xl font-bold mb-2 text-gray-200 antialiased"}>{currentProject.title}</h2>
-                <p className={"text-gray-300 mb-4"}>{currentProject.description}</p>
-                <div className={"flex flex-wrap gap-2"}>
-                    {currentProject.technologies.map((tech, index) => {
-                        return (
-                            <MiniTechIconModal language={tech} key={index}/>
-                        );
-                    })}
+
+        <div className={"order-1 min-w-0 overflow-hidden md:order-2 md:w-4/6"}>
+            <AnimatePresence mode={"wait"} initial={false}>
+                <motion.section
+                    key={currentProjectIndex}
+                    initial={{opacity: 0, x: 40}}
+                    animate={{opacity: 1, x: 0}}
+                    exit={{opacity: 0, x: -40}}
+                    transition={{duration: 0.35, ease: "easeInOut"}}
+                    className={"flex h-full w-full min-w-0 flex-col overflow-hidden rounded-xl border border-white/20 bg-white/5"}>
+                {currentProject.imageUrl ? (
+                    <img src={currentProject.imageUrl} alt={currentProject.title}
+                         className={"h-44 w-full rounded-t-lg object-cover sm:h-52"}/>
+                ) : (
+                    <div className={"flex h-44 w-full items-center justify-center rounded-t-lg border-b border-white/20 bg-gradient-to-br from-white/5 to-white/10 text-sm text-gray-300 sm:h-52"}>
+                        Preview coming soon
+                    </div>
+                )}
+                <div className={"p-4 sm:p-5"}>
+                    <h2 className={"mb-2 break-all text-lg font-bold text-gray-200 antialiased sm:text-xl"}>{currentProject.title}</h2>
+                    <p className={"mb-4 break-all text-sm text-gray-300 sm:text-base"}>{currentProject.description}</p>
+                    <div className={"flex flex-wrap gap-2"}>
+                        {currentProject.technologies.map((tech, index) => {
+                            return (
+                                <MiniTechIconModal language={tech} key={index}/>
+                            );
+                        })}
+                    </div>
                 </div>
-            </div>
-        </section>
-        <div className={"w-1/5 h-full flex items-center justify-center"}>
+                </motion.section>
+            </AnimatePresence>
+        </div>
+
+        <div className={"order-3 flex shrink-0 items-center justify-center md:w-1/6"}>
             <ArrowRight
-                size={75}
+                size={42}
                 className={"text-gray-100 cursor-pointer antialiased hover:text-gray-300 transition-colors duration-500 shadow-black"}
                 onClick={handleRightArrowClick}
             />

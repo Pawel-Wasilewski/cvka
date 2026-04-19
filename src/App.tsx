@@ -3,14 +3,18 @@ import _MainHeaderComponent from "./components/headerComponents/_MainHeaderCompo
 import HomeMainComponent from "./components/HomeMainComponent.tsx";
 import _HamburgerMenuWrapper from "./components/hamburgerMenuComponents/_HamburgerMenuWrapper.tsx";
 import _ToastWrapper from "./components/toasts/_ToastWrappper.tsx";
+import _HamburgerPDFToDownloadWrapper
+    from "./components/HamburgerPDFToDownloadMenuComponents/_HamburgerPDFToDownloadWrapper.tsx";
 
 function App(): JSX.Element {
     return (
         <_ToastWrapper>
-            <_HamburgerMenuWrapper>
-                <_MainHeaderComponent/>
-                <HomeMainComponent/>
-            </_HamburgerMenuWrapper>
+            <_HamburgerPDFToDownloadWrapper>
+                <_HamburgerMenuWrapper>
+                    <_MainHeaderComponent/>
+                    <HomeMainComponent/>
+                </_HamburgerMenuWrapper>
+            </_HamburgerPDFToDownloadWrapper>
         </_ToastWrapper>
     )
 }

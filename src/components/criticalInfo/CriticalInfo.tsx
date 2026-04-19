@@ -1,60 +1,46 @@
-import type {JSX} from "react";
+import {type JSX} from "react";
 import glassmorphism from "../../helperFunctions/glassmorphism.ts";
-import {SiGithub} from "@icons-pack/react-simple-icons";
-import {AtSign, Earth, FileText} from "lucide-react";
+import {AtSign, Earth} from "lucide-react";
 import useToastQueue from "../../hooks/UseToastQueue.ts";
+import DownloadCVModal from "./criticalInfoComponents/DownloadCVModal.tsx";
+import VisitGithubModal from "./criticalInfoComponents/VisitGithubModal.tsx";
 
 export default function CriticalInfo(): JSX.Element {
     const addToast = useToastQueue((state => state.addToast));
+
+
     async function copyEmailToClipboard(): Promise<void> {
         console.log("Copy email to clipboard");
-        await navigator.clipboard.writeText("wasilewski.pawel2007@gmail.com");
+        await navigator.clipboard.writeText("kontakt@pawel-wasilewski.pl");
         addToast("success", "Email address copied to clipboard!", 5000);
     }
 
     return (<section
-        className={glassmorphism + "margin-auto p-8 rounded-lg w-2/3 flex flex-row gap-10 justify-between flex-wrap mt-46"}>
-        <article className={"lg:w-1/2 md:w-full"}>
-            <h2 className={"text-2xl text-gray-100 font-bold antialiased font-primary mb-4"}>Details</h2>
-            <section className={"flex lg:flex-row md:flex-row sm:flex-col gap-4 text-gray-100 text-lg font-medium cursor-pointer antialiased font-primary"}>
-                <a  href={"mailto:wasilewski.pawel2007@gmail.com"}
-                    onClick={copyEmailToClipboard}
-                   className={"flex items-center bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 shadow-lg p-2"}>
-                    <div className={"bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 shadow-lg p-2"}>
-                        <AtSign />
+        className={`${glassmorphism} mx-auto mt-28 flex w-[92%] max-w-5xl flex-col gap-6 rounded-2xl p-4 sm:mt-32 sm:p-6 md:mt-36 md:flex-row md:justify-between md:gap-10 md:p-8`}>
+        <article className={"w-full md:w-3/5"}>
+            <h2 className={"mb-4 font-primary text-xl font-bold text-gray-100 antialiased sm:text-2xl"}>Details</h2>
+            <section
+                className={"flex flex-col gap-3 font-primary text-base font-medium text-gray-100 antialiased sm:gap-4 sm:text-lg lg:flex-row"}>
+                <a href={"mailto:wasilewski.pawel2007@gmail.com"}
+                   onClick={copyEmailToClipboard}
+                   className={"flex min-h-12 items-center rounded-2xl border border-white/20 bg-white/10 p-2 shadow-lg"}>
+                    <div className={"rounded-xl border border-white/20 bg-white/10 p-2 shadow-lg"}>
+                        <AtSign/>
                     </div>
-                    <p className={"ml-2 inline-block"}>wasilewski.pawel2007@gmail.com</p>
+                    <p className={"ml-2 inline-block break-all"}>kontakt@pawel-wasilewski.pl</p>
                 </a>
                 <div
-                    className={"flex items-center bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 shadow-lg p-2"}>
-                    <div className={" bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 shadow-lg p-2"}>
-                        <Earth />
+                    className={"flex min-h-12 items-center rounded-2xl border border-white/20 bg-white/10 p-2 shadow-lg"}>
+                    <div className={"rounded-xl border border-white/20 bg-white/10 p-2 shadow-lg"}>
+                        <Earth/>
                     </div>
                     <p className={"ml-2 inline-block"}>Zabrze, Poland</p>
                 </div>
             </section>
         </article>
-        <article className={"lg:w-1/3 md:w-full"}>
-            <a href={"#"} className={"hover:underline text-gray-100"}>
-                <section className={"flex flex-col gap-4 text-gray-100 text-lg font-medium antialiased font-primary"}>
-                    <div
-                        className={"bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 shadow-lg p-2 flex flex-row items-center"}>
-                        <div
-                            className={" bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 shadow-lg p-2"}>
-                            <FileText />
-                        </div>
-                        <p className={"ml-2 inline-block"}>
-                            Download CV
-                        </p>
-                    </div>
-                </section>
-            </a>
-            <span className={"flex flex-row items-baseline gap-4 mt-4"}>
-                <a href={"#"}
-                   className={"bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 shadow-lg p-3 flex flex-row items-center"}>
-                    <SiGithub className={"scale-150 text-gray-100"}/>
-                </a>
-            </span>
+        <article className={"w-full md:w-2/5"}>
+            <DownloadCVModal/>
+            <VisitGithubModal/>
         </article>
     </section>)
 }

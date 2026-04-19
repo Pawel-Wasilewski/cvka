@@ -8,7 +8,8 @@ import {
     SiTailwindcss,
     SiTypescript,
     SiVite,
-    SiSharp
+    SiSharp,
+    SiWordpress
 } from "@icons-pack/react-simple-icons";
 import type SVGIconSelectorProps from "../../interfaces/props/SVGIconSelectorProps.ts";
 
@@ -29,9 +30,10 @@ const ICON_MAP: Record<string, IconComponent> = {
     ReactNative: SiReact,
     TailwindCSS: SiTailwindcss,
     Vite: SiVite,
+    Wordpress: SiWordpress,
 };
 
 export default function GetSVGIconFromReactIcons(props: SVGIconSelectorProps): JSX.Element {
     const Icon: IconComponent = ICON_MAP[props.language];
-    return <Icon className={props.className ?? ""}/>;
+    return <Icon className={props.className!}/>;
 }
