@@ -12,7 +12,7 @@ export default function ProjectCarosell(): JSX.Element {
         {
             projectStatus: "Completed",
             title: "StoryTeller",
-            imageUrl: null,
+            imageUrl: "storyteller.jpg",
             description: "Llama 3.5B plugged into MAUI application and concludes interaction with user in creating a story based on user input. The story is then displayed in the app.",
             technologies: [
                 "MAUI",
@@ -23,7 +23,7 @@ export default function ProjectCarosell(): JSX.Element {
         {
             projectStatus: "Completed",
             title: "RobotSteering",
-            imageUrl: null,
+            imageUrl: "robotsteering.jpg",
             description: "React Native app for controlling a robot. The app connects to the robot via WebSocket connection and sends commands by RaspberryPi based on user input. The app also receives feedback from the robot and displays it to the user.",
             technologies: [
                 "ReactNative",
@@ -35,7 +35,7 @@ export default function ProjectCarosell(): JSX.Element {
         {
             projectStatus: "Completed",
             title: "QuizZS10_2025DniZawodowe",
-            imageUrl: "abc",
+            imageUrl: "quizzs10.png",
             description: "React based web app with purpose for internal contest in High School",
             technologies: [
                 "React",
@@ -48,7 +48,7 @@ export default function ProjectCarosell(): JSX.Element {
         {
             projectStatus: "Completed",
             title: "ZS10 Website",
-            imageUrl: "abc",
+            imageUrl: "zs10.png",
             description: "Wordpress Site for my school co-created with others.",
             technologies: [
                 "Wordpress",
@@ -76,7 +76,7 @@ export default function ProjectCarosell(): JSX.Element {
             />
         </div>
 
-        <div className={"order-1 min-w-0 overflow-hidden md:order-2 md:w-4/6"}>
+        <div className={"order-1 min-w-0 overflow-hidden md:order-2 cursor-pointer md:w-4/6"} onClick={() => window.open(currentProject.projectUrl!, "_blank")}>
             <AnimatePresence mode={"wait"} initial={false}>
                 <motion.section
                     key={currentProjectIndex}
