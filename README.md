@@ -1,13 +1,13 @@
 # Personal Website
 
-Krotki projekt portfolio prezentujacy:
+Krótki projekt portfolio prezentujący:
 - informacje o mnie,
-- technologie, z ktorymi pracuje,
-- doswiadczenie,
+- technologie, z którymi pracuje,
+- doświadczenie,
 - wybrane projekty,
 - szybki kontakt i pobieranie CV.
 
-## Uzyte technologie
+## Uzżte technologie
 
 - React 19
 - TypeScript
