@@ -4,21 +4,25 @@
       "vite": "^8.0.0"
     }
   },
-  "name": "personalwebsite",
-  "private": true,
-  "version": "0.0.0",
+  "name": "Personal Portfolio",
+  "homepage": "portfolio.pawel-wasilewski.pl",
+  "private": false,
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@icons-pack/react-simple-icons": "^13.13.0",
     "@tailwindcss/vite": "^4.2.1",
     "bootstrap-icons": "^1.13.1",
     "flubber": "^0.4.2",
+    "gh-pages": "^6.3.0",
     "lucide-react": "^1.8.0",
     "motion": "^12.38.0",
     "react": "^19.2.4",
