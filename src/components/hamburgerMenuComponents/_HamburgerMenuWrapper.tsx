@@ -9,6 +9,15 @@ interface HamburgerProps {
 
 export default function _HamburgerMenuWrapper(prop: HamburgerProps): JSX.Element {
     const {isToggled, toggle} = UseHamburgerMenu();
+
+    function redirectToSection(sectionId: string) {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({behavior: "smooth"});
+        }
+        toggle();
+    }
+
     return (
         <>
             {prop.children}
@@ -24,13 +33,16 @@ export default function _HamburgerMenuWrapper(prop: HamburgerProps): JSX.Element
                 </motion.div>
                 <section className={" flex h-full flex-col items-center justify-center"}>
                     <ul className={"flex flex-col gap-8 text-gray-100 text-2xl font-medium antialiased font-primary"}>
-                        <li className={"hover:text-gray-300 transition duration-500 hover:scale-125 flex flex-row cursor-pointer"}>
+                        <li className={"hover:text-gray-300 transition duration-500 hover:scale-125 flex flex-row cursor-pointer"}
+                            onClick={() => redirectToSection("contact")}>
                             <UserRound className={"mr-4"}/> Contact
                         </li>
-                        <li className={"hover:text-gray-300 transition duration-500 hover:scale-125 flex flex-row cursor-pointer"}>
+                        <li className={"hover:text-gray-300 transition duration-500 hover:scale-125 flex flex-row cursor-pointer"}
+                            onClick={() => redirectToSection("technologies")}>
                             <House className={"mr-4"}/> Technologies
                         </li>
-                        <li className={"hover:text-gray-300 transition duration-500 hover:scale-125 flex flex-row cursor-pointer"}>
+                        <li className={"hover:text-gray-300 transition duration-500 hover:scale-125 flex flex-row cursor-pointer"}
+                            onClick={() => redirectToSection("projects")}>
                             <IdCard className={"mr-4"}/> Projects
                         </li>
                     </ul>

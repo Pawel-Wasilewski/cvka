@@ -16,6 +16,7 @@ export default function CriticalInfo(): JSX.Element {
     }
 
     return (<section
+        id={"contact"}
         className={`${glassmorphism} mx-auto mt-28 flex w-[92%] max-w-5xl flex-col gap-6 rounded-2xl p-4 sm:mt-32 sm:p-6 md:mt-36 md:flex-row md:justify-between md:gap-10 md:p-8`}>
         <article className={"w-full md:w-3/5"}>
             <h2 className={"mb-4 font-primary text-xl font-bold text-gray-100 antialiased sm:text-2xl"}>Details</h2>

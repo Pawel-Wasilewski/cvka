@@ -44,6 +44,7 @@ export default function _MainTechnologiesComponent(): JSX.Element {
     ];
 
     return (<section
+        id={"technologies"}
         className={`${glassmorphism} mx-auto mt-6 w-[92%] max-w-5xl rounded-2xl p-4 sm:mt-8 sm:p-6 md:p-7`}>
         <h2 className={"mb-4 font-primary text-xl font-bold text-gray-100 antialiased sm:text-2xl"}>Mainly used Technologies</h2>
         <article

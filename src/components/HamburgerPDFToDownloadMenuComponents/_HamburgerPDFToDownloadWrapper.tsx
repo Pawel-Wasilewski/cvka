@@ -9,6 +9,9 @@ interface HamburgerProps {
 
 export default function _HamburgerPDFToDownloadWrapper(prop: HamburgerProps): JSX.Element {
     const {isToggled, toggle} = UsePDFMenu();
+    const englishCvUrl = `${import.meta.env.BASE_URL}pdfs/pawel_wasilewski_cv_en.pdf`;
+    const polishCvUrl = `${import.meta.env.BASE_URL}pdfs/pawel_wasilewski_cv_pl.pdf`;
+
     return (
         <>
             {prop.children}
@@ -23,10 +26,10 @@ export default function _HamburgerPDFToDownloadWrapper(prop: HamburgerProps): JS
                        className={"text-gray-100 hover:rotate-45 cursor-pointer hover:scale-125 transition duration-200"}/>
                 </motion.div>
                 <section className={"text-2xl antialiased flex h-full flex-col items-center justify-center"}>
-                    <a href={"pawel_wasilewski_cv_en.pdf"} target={"_blank"}
+                    <a href={englishCvUrl} target={"_blank"} rel={"noreferrer"}
                        className={"flex flex-row items-center justify-between m-4 text-gray-100 hover:text-gray-200 hover:scale-125 transform duration-200"}><FileText
                         className={"text-2xl mr-4"}/> Download English Version </a>
-                    <a href={"pawel_wasilewski_cv_pl.pdf"} target={"_blank"}
+                    <a href={polishCvUrl} target={"_blank"} rel={"noreferrer"}
                        className={"flex flex-row items-center justify-center m-4 text-gray-100 hover:text-gray-200 hover:scale-125 transform duration-200"}><FileText
                         className={"text-2xl mr-4"}/> Download Polish Version </a>
                 </section>
