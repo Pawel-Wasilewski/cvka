@@ -4,7 +4,7 @@ import MiniTechIconModal from "../helperComponents/MiniTechIconModal.tsx";
 import {ArrowLeft, ArrowRight} from "lucide-react";
 import {AnimatePresence, motion} from "framer-motion";
 
-export default function ProjectCarosell(): JSX.Element {
+export default function ProjectCarousel(): JSX.Element {
     const [currentProjectIndex, setCurrentProjectIndex] = useState<number>(0);
 
     // "Completed" | "In Progress" | "On hold"
@@ -49,9 +49,9 @@ export default function ProjectCarosell(): JSX.Element {
             projectStatus: "Completed",
             title: "ZS10 Website",
             imageUrl: "zs10.png",
-            description: "Wordpress Site for my school co-created with others.",
+            description: "WordPress Site for my school co-created with others.",
             technologies: [
-                "Wordpress",
+                "WordPress",
             ],
             projectUrl: "https://www.zs10.zabrze.pl/"
         }

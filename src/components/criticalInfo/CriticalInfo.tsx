@@ -22,7 +22,7 @@ export default function CriticalInfo(): JSX.Element {
             <h2 className={"mb-4 font-primary text-xl font-bold text-gray-100 antialiased sm:text-2xl"}>Details</h2>
             <section
                 className={"flex flex-col gap-3 font-primary text-base font-medium text-gray-100 antialiased sm:gap-4 sm:text-lg lg:flex-row"}>
-                <a href={"mailto:wasilewski.pawel2007@gmail.com"}
+                <a href={"mailto:kontakt@pawel-wasilewski.pl"}
                    onClick={copyEmailToClipboard}
                    className={"flex min-h-12 items-center rounded-2xl border border-white/20 bg-white/10 p-2 shadow-lg"}>
                     <div className={"rounded-xl border border-white/20 bg-white/10 p-2 shadow-lg"}>

@@ -5,7 +5,7 @@ export default function DevDescriptionModal(): JSX.Element {
     return (<section className={`${glassmorphism} mx-auto mt-6 w-[92%] max-w-5xl rounded-2xl p-4 sm:mt-8 sm:p-6 md:p-8`}>
         <h2 className={"mb-3 font-primary text-xl font-bold text-gray-100 antialiased sm:mb-4 sm:text-2xl"}>About Me</h2>
         <article className={"flex flex-col gap-4 font-primary text-base font-medium text-gray-100 antialiased sm:text-lg"}>
-            <p className={"break-words text-justify"}>
+            <p className={"wrap-break-word text-justify"}>
                 Hello! I'm Paweł, a software developer with a love for creating innovative solutions. With a strong background in web development,
                 I strive to build applications that are functional. I enjoy working on projects that challenge me to learn new technologies and push the boundaries of what's possible.
                 When I'm not coding.

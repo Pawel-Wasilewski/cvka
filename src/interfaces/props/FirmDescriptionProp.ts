@@ -1,4 +1,4 @@
-export default interface FirmDescripctionProp {
+export default interface FirmDescriptionProp {
     firmName: string;
     fromXToY: string;
     jobPosition: string;

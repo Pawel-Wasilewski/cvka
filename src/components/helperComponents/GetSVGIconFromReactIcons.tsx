@@ -30,7 +30,7 @@ const ICON_MAP: Record<string, IconComponent> = {
     ReactNative: SiReact,
     TailwindCSS: SiTailwindcss,
     Vite: SiVite,
-    Wordpress: SiWordpress,
+    WordPress: SiWordpress,
 };
 
 export default function GetSVGIconFromReactIcons(props: SVGIconSelectorProps): JSX.Element {
