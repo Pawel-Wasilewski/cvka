@@ -1,47 +1,12 @@
 import type {JSX} from "react";
 import glassmorphism from "../../helperFunctions/glassmorphism.ts";
-import {
-    SiAndroidstudio,
-    SiAngular,
-    SiDocker,
-    SiDotnet,
-    SiExpress,
-    SiJavascript,
-    SiMongodb,
-    SiMongoose,
-    SiMysql,
-    SiNodedotjs,
-    SiPrisma,
-    SiPython,
-    SiReact,
-    SiTypescript
-} from "@icons-pack/react-simple-icons";
+
 import KnownTechnologyModal from "../experienceComponents/KnownTechnologyModal.tsx";
 import type KnownTechnologyModalProps from "../../interfaces/props/KnownTechnologyProp.ts";
+import {alsoKnownTechnologies, mainlyUsedTechnologies} from "../../assets/data/mainlyUsedTechnologies.ts";
 
 
 export default function _MainTechnologiesComponent(): JSX.Element {
-    const mainlyUsedTechnologies: KnownTechnologyModalProps[] = [
-        {technologyName: "TypeScript", technologyIcon: <SiTypescript className={"font-bold text-white scale-175"}/>},
-        {technologyName: "NodeJS", technologyIcon: <SiNodedotjs className={"font-bold text-white scale-200"}/>},
-        {technologyName: "React", technologyIcon: <SiReact className={"font-bold text-white scale-200"}/>},
-        {technologyName: "Express", technologyIcon: <SiExpress className={"font-bold text-white scale-200"}/>},
-        {technologyName: "ReactNative", technologyIcon: <SiReact className={"font-bold text-white scale-200"}/>},
-        {technologyName: "MySQL", technologyIcon: <SiMysql className={"font-bold text-white scale-200"}/>},
-        {technologyName: "Prisma", technologyIcon: <SiPrisma className={"font-bold text-white scale-200"}/>},
-        {technologyName: "MongoDB", technologyIcon: <SiMongodb className={"font-bold text-white scale-200"}/>},
-        {technologyName: "Mongoose", technologyIcon: <SiMongoose className={"font-bold text-white scale-200"}/>},
-        {technologyName: "Docker", technologyIcon: <SiDocker className={"font-bold text-white scale-200"}/>},
-    ];
-
-    const alsoKnownTechnologies: KnownTechnologyModalProps[] = [
-        {technologyName: "JavaScript", technologyIcon: <SiJavascript className={"font-bold text-white scale-175"}/>},
-        {technologyName: "Angular", technologyIcon: <SiAngular className={"font-bold text-white scale-200"}/>},
-        {technologyName: "Python", technologyIcon: <SiPython className={"font-bold text-white scale-200"}/>},
-        {technologyName: "MAUI", technologyIcon: <SiDotnet className={"font-bold text-white scale-200"}/>},
-        {technologyName: "WPF", technologyIcon: <SiDotnet className={"font-bold text-white scale-200"}/>},
-        {technologyName: "JavaAndroid", technologyIcon: <SiAndroidstudio className={"font-bold text-white scale-200"}/>},
-    ];
 
     return (<section
         id={"technologies"}
