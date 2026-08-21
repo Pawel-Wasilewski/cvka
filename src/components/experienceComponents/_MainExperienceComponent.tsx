@@ -31,8 +31,8 @@ export default function _MainExperienceComponent(): JSX.Element {
         className={`${glassmorphism} mx-auto mt-6 flex w-[92%] max-w-5xl flex-col gap-6 rounded-2xl p-4 sm:mt-8 sm:p-6 md:p-8`}>
         <h1 className={"font-primary text-2xl font-bold text-gray-100 antialiased sm:text-3xl"}> Experience </h1>
 
-        {experience.map((firmDescription: FirmDescriptionProp, index: number): JSX.Element => (
-            <FirmDescriptionModal firmName={firmDescription.firmName} fromXToY={firmDescription.fromXToY} jobPosition={firmDescription.jobPosition} summaryOfKnowledgeGained={firmDescription.summaryOfKnowledgeGained} key={index}/>
+        {experience.map((firmDescription: FirmDescriptionProp): JSX.Element => (
+            <FirmDescriptionModal firmName={firmDescription.firmName} fromXToY={firmDescription.fromXToY} jobPosition={firmDescription.jobPosition} summaryOfKnowledgeGained={firmDescription.summaryOfKnowledgeGained} key={`${firmDescription.firmName}-${firmDescription.fromXToY}`}/>
         ))}
     </div>)
 }

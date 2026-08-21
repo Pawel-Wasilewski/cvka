@@ -2,7 +2,6 @@ import {type JSX, useState} from "react";
 import type {ProjectInfoProps} from "../../interfaces/props/ProjectInfoProp.ts";
 import MiniTechIconModal from "../helperComponents/MiniTechIconModal.tsx";
 import {ArrowLeft, ArrowRight} from "lucide-react";
-import {AnimatePresence, motion} from "framer-motion";
 
 export default function ProjectCarousel(): JSX.Element {
     const [currentProjectIndex, setCurrentProjectIndex] = useState<number>(0);
@@ -77,14 +76,7 @@ export default function ProjectCarousel(): JSX.Element {
         </div>
 
         <div className={"order-1 min-w-0 overflow-hidden md:order-2 cursor-pointer md:w-4/6"} onClick={() => window.open(currentProject.projectUrl!, "_blank")}>
-            <AnimatePresence mode={"wait"} initial={false}>
-                <motion.section
-                    key={currentProjectIndex}
-                    initial={{opacity: 0, x: 40}}
-                    animate={{opacity: 1, x: 0}}
-                    exit={{opacity: 0, x: -40}}
-                    transition={{duration: 0.35, ease: "easeInOut"}}
-                    className={"flex h-full w-full min-w-0 flex-col overflow-hidden rounded-xl border border-white/20 bg-white/5"}>
+            <section className={"flex h-full w-full min-w-0 flex-col overflow-hidden rounded-xl border border-white/20 bg-white/5"}>
                 {currentProject.imageUrl ? (
                     <img src={currentProject.imageUrl} alt={currentProject.title}
                          className={"h-44 w-full rounded-t-lg object-cover sm:h-52"}/>
@@ -97,15 +89,14 @@ export default function ProjectCarousel(): JSX.Element {
                     <h2 className={"mb-2 break-all text-lg font-bold text-gray-200 antialiased sm:text-xl"}>{currentProject.title}</h2>
                     <p className={"mb-4 break-all text-sm text-gray-300 sm:text-base"}>{currentProject.description}</p>
                     <div className={"flex flex-wrap gap-2"}>
-                        {currentProject.technologies.map((tech, index) => {
+                        {currentProject.technologies.map((tech) => {
                             return (
-                                <MiniTechIconModal language={tech} key={index}/>
+                                <MiniTechIconModal language={tech} key={`${currentProject.title}-${tech}`}/>
                             );
                         })}
                     </div>
                 </div>
-                </motion.section>
-            </AnimatePresence>
+            </section>
         </div>
 
         <div className={"order-3 flex shrink-0 items-center justify-center md:w-1/6"}>

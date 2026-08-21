@@ -49,16 +49,16 @@ export default function _MainTechnologiesComponent(): JSX.Element {
         <h2 className={"mb-4 font-primary text-xl font-bold text-gray-100 antialiased sm:text-2xl"}>Mainly used Technologies</h2>
         <article
             className={"flex flex-row flex-wrap items-stretch justify-center gap-4 text-center font-primary text-gray-100 antialiased sm:gap-5"}>
-            {mainlyUsedTechnologies.map((technologyDisplayed: KnownTechnologyModalProps, index: number): JSX.Element => (
-                <KnownTechnologyModal key={index} technologyName={technologyDisplayed.technologyName}
+            {mainlyUsedTechnologies.map((technologyDisplayed: KnownTechnologyModalProps): JSX.Element => (
+                <KnownTechnologyModal key={technologyDisplayed.technologyName} technologyName={technologyDisplayed.technologyName}
                                       technologyIcon={technologyDisplayed.technologyIcon}/>
             ))}
         </article>
         <h3 className={"mb-4 mt-6 font-primary text-lg text-gray-100 antialiased sm:text-xl"}>Also known Technologies</h3>
         <article
             className={"flex flex-row flex-wrap items-stretch justify-center gap-4 text-center font-primary text-gray-100 antialiased sm:gap-5"}>
-            {alsoKnownTechnologies.map((technologyDisplayed: KnownTechnologyModalProps, index: number): JSX.Element => (
-                <KnownTechnologyModal key={index} technologyName={technologyDisplayed.technologyName}
+            {alsoKnownTechnologies.map((technologyDisplayed: KnownTechnologyModalProps): JSX.Element => (
+                <KnownTechnologyModal key={technologyDisplayed.technologyName} technologyName={technologyDisplayed.technologyName}
                                       technologyIcon={technologyDisplayed.technologyIcon}/>
             ))}
         </article>

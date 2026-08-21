@@ -1,7 +1,7 @@
-import type {JSX} from "react";
+import {memo, type JSX} from "react";
 import type FirmDescriptionProp from "../../interfaces/props/FirmDescriptionProp.ts";
 
-export default function FirmDescriptionModal(prop: FirmDescriptionProp): JSX.Element {
+const FirmDescriptionModal = memo(function FirmDescriptionModal(prop: FirmDescriptionProp): JSX.Element {
     return (<section className={"flex w-full"}>
         <article className={"w-full border-l-2 border-l-gray-100 pl-4 sm:pl-6 md:pl-8"}>
             <div className={"flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between"}>
@@ -13,10 +13,12 @@ export default function FirmDescriptionModal(prop: FirmDescriptionProp): JSX.Ele
             </div>
             <hr className={"m-3 border-white/20 sm:m-4"}/>
             <ul className={"ml-2 list-inside list-disc sm:ml-4"}>
-                {prop.summaryOfKnowledgeGained.map((description: string, index: number): JSX.Element => (
-                    <li key={index} className={"wrap-break-word p-2 text-justify text-sm text-gray-100 antialiased sm:text-base"}> {description} </li>
+                {prop.summaryOfKnowledgeGained.map((description: string): JSX.Element => (
+                    <li key={`${prop.firmName}-${description}`} className={"wrap-break-word p-2 text-justify text-sm text-gray-100 antialiased sm:text-base"}> {description} </li>
                     ))}
             </ul>
         </article>
     </section>)
-}
+});
+
+export default FirmDescriptionModal;
