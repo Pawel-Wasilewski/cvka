@@ -1,7 +1,7 @@
 import {memo, type JSX} from "react";
 import type FirmDescriptionProp from "../../interfaces/props/FirmDescriptionProp.ts";
 
-const FirmDescriptionModal = memo(function FirmDescriptionModal(prop: FirmDescriptionProp): JSX.Element {
+export default memo(function FirmDescriptionModal(prop: FirmDescriptionProp): JSX.Element {
     return (<section className={"flex w-full"}>
         <article className={"w-full border-l-2 border-l-gray-100 pl-4 sm:pl-6 md:pl-8"}>
             <div className={"flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between"}>
@@ -20,5 +20,3 @@ const FirmDescriptionModal = memo(function FirmDescriptionModal(prop: FirmDescri
         </article>
     </section>)
 });
-
-export default FirmDescriptionModal;
