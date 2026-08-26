@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://portfolio.pawel-wasilewski.pl/sitemap.xml
+

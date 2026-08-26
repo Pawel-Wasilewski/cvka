@@ -1,0 +1,42 @@
+[
+  {
+    "name": "JavaScript",
+    "icon": "javascript.svg",
+    "hex": "#F7DF1E"
+  },
+  {
+    "name": "TypeScript",
+    "icon": "typescript.svg",
+    "hex": "#3178C6"
+  },
+  {
+    "name": "React",
+    "icon": "react.svg",
+    "hex": "#61DAFB"
+  },
+  {
+    "name": "React Native",
+    "icon": "react-native.svg",
+    "hex": "#61DAFB"
+  },
+  {
+    "name": "shadcn/ui",
+    "icon": "shadcn-ui.svg",
+    "hex": "#000000"
+  },
+  {
+    "name": "Tailwind CSS",
+    "icon": "tailwindcss.svg",
+    "hex": "#06B6D4"
+  },
+  {
+    "name": "Node.js",
+    "icon": "nodejs.svg",
+    "hex": "#339933"
+  },
+  {
+    "name": "Docker",
+    "icon": "docker.svg",
+    "hex": "#2496ED"
+  }
+]

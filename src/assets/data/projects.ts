@@ -1,5 +1,5 @@
 // "Completed" | "In Progress" | "On hold"
-import type {ProjectInfoProps} from "../../interfaces/props/ProjectInfoProp.ts";
+import type {ProjectInfoProps} from "@/legacy/interfaces/props/ProjectInfoProp.ts";
 
 export const projects: ProjectInfoProps[] = [
     {
