@@ -29,7 +29,7 @@ function App(): JSX.Element {
     else {
         return (
             <ToastWrapper>
-                <section className={"min-w-screen min-h-screen flex flex-row justify-around gap-4"}>
+                <section className={"w-screen min-h-screen flex flex-row justify-around"}>
                     <Header/>
                     <MainContent/>
                 </section>

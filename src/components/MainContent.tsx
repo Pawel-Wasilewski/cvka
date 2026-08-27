@@ -1,13 +1,17 @@
 import type {JSX} from "react";
 import {getUserBrowserWidth} from "@/assets/helper_functions/userBrowser.ts";
-import ScreenSize from "@/assets/data/screenSize.ts";
+import ScreenSize from "@/assets/data/enums/screenSize.ts";
 import AboutMe from "@/components/AboutMe.tsx";
+import TechnologiesCarousel from "@/components/TechnologiesCarousel.tsx";
+import EducationWorkAndProjectSection from "@/components/EducationWorkAndProjectSection.tsx";
 
 export default function MainContent(): JSX.Element {
     if (getUserBrowserWidth().valueOf() === ScreenSize.DESKTOP.valueOf()) {
         return (
-            <main className="min-w-3/4 min-h-screen flex flex-col text-white">
+            <main className={"min-w-0 max-w-3/4 min-h-screen flex flex-col text-white overflow-hidden"}>
                 <AboutMe/>
+                <TechnologiesCarousel/>
+                <EducationWorkAndProjectSection/>
             </main>
         );
     } else {

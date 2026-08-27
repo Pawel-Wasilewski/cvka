@@ -1,4 +1,4 @@
-import ScreenSize from "@/assets/data/screenSize.ts";
+import ScreenSize from "@/assets/data/enums/screenSize.ts";
 
 export function getUserBrowserWidth(): ScreenSize {
     const width: number = document.body.clientWidth;

@@ -3,14 +3,14 @@ import type {JSX} from "react";
 import {parts} from "@/assets/data/cvParts.ts";
 import type CvPartsInterface from "@/assets/data/cvPartsInterface.ts";
  */
-import ScreenSize from "@/assets/data/screenSize.ts";
+import ScreenSize from "@/assets/data/enums/screenSize.ts";
 import {getUserBrowserWidth} from "@/assets/helper_functions/userBrowser.ts";
 
 export default function Header(): JSX.Element {
 
     if (getUserBrowserWidth().valueOf() === ScreenSize.DESKTOP.valueOf()) {
         return (
-            <header className="w-full md:min-w-1/4 md:min-h-full flex flex-col items-center p-4 text-white">
+            <header className="w-full min-w-1/4 min-h-full flex flex-col items-center p-4 text-white">
                 <section className={"w-full flex flex-col mb-4 md:mb-6"}>
                     <h1 className={"text-2xl md:text-3xl font-bold antialiased"}> Paweł Wasilewski </h1>
                     <p className={"text-base md:text-lg antialiased"}> Software Developer </p>
