@@ -3,10 +3,10 @@ import type WorkExperienceData from "@/assets/data/workExperienceData.ts";
 
 export default function JobField(props: WorkExperienceData): JSX.Element {
     return (
-        <section className={"w-full h-72 flex flex-row items-center justify-start rounded-2xl backdrop-blur-2xl transform-gpu will-change-transform"}>
-            <div className={"w-2 h-full bg-linear-to-b from-red-400 to-blue-500"} />
+        <section className="w-full min-h-72 h-fit flex flex-row items-center justify-start rounded-2xl ...">
+            <div className="w-2  self-stretch bg-linear-to-b from-red-400 to-blue-500" />
 
-            <article className={"w-full h-full flex flex-col items-start justify-center gap-2 p-4"}>
+            <article className="w-full self-stretch flex flex-col items-start backdrop-blur-2xl justify-center gap-2 p-4">
                 <section className={"w-full flex flex-row items-center justify-between"}>
                     <div className={"flex flex-row items-center justify-start gap-2 h-1/4"}>
                         <a href={props.companySiteUrl!} target="_blank" rel="noopener noreferrer" className={"flex flex-row items-center justify-start gap-2"}>

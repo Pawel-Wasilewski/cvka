@@ -11,7 +11,7 @@ const projects = projectsDescriptions as unknown as ProjectStatusData[];
 
 //TODO when in Uni add education
 export default function EducationWorkAndProjectSection(): JSX.Element {
-    const [currentData,           setCurrentData] = useState<CurrentData>(CurrentData.WORK);
+    const [currentData, setCurrentData] = useState<CurrentData>(CurrentData.WORK);
 
     function changeCurrentData(set: CurrentData): void {
         switch (set) {

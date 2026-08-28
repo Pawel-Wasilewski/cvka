@@ -15,7 +15,12 @@ export default function TechnologiesCarousel(): JSX.Element {
                         key={tech.name}
                         className={"flex w-52 h-12 items-center justify-between gap-4 p-4 rounded-2xl"}
                         style={{backgroundColor: tech.backgroundHex}}>
-                        <SVGIcon svgRoute={tech.icon} svgAlt={tech.name} hexIfMonochrome={tech.foregroundHex} svgWidth={"24px"} svgHeight={"24px"}/>
+                        <SVGIcon
+                            svgRoute={tech.icon}
+                            svgAlt={tech.name}
+                            hexIfMonochrome={tech.foregroundHex}
+                            svgWidth={"24px"}
+                            svgHeight={"24px"}/>
                         <h4 className="text-lg font-bold"
                             style={{color: tech.foregroundHex}}>
                             {tech.name}

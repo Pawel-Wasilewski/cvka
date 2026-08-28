@@ -15,10 +15,10 @@ export default function ProjectField(props: ProjectStatusData): JSX.Element {
     })();
 
     return (
-        <section className={"w-full h-48 flex flex-row items-center justify-start rounded-2xl backdrop-blur-2xl"}>
-            <div className={"w-2 h-full bg-linear-to-b from-green-400 to-blue-500"} />
+        <section className={"w-full min-h-48 h-fit flex flex-row items-center justify-start rounded-2xl"}>
+            <div className={"w-2 self-stretch bg-linear-to-b from-green-400 to-blue-500"} />
 
-            <article className={"w-full h-full flex flex-col items-start justify-center gap-2 p-4 backdrop-blur-2xl"}>
+            <article className="w-full self-stretch flex flex-col items-start backdrop-blur-2xl justify-center gap-2 p-4">
                 <section className={"w-full h-1/4 flex flex-row items-center justify-between"}>
                     <a href={props.projectRepositoryURL!} target="_blank" rel="noopener noreferrer">
                         <h3 className={"text-lg font-bold text-white antialiased"}>
