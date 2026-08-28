@@ -34,7 +34,7 @@ export default function EducationWorkAndProjectSection(): JSX.Element {
                         <button
                             type={"button"}
                             onClick={(): void => changeCurrentData(CurrentData.WORK)}
-                            className={"hover:border-b-2 text-white font-bold py-2 px-4 cursor-pointer hover:scale-110 transition-transform duration-150 transform-gpu"}>
+                            className={"hover:border-b-2 text-white font-bold py-2 px-4 cursor-pointer transition-transform duration-150 transform-gpu"}>
                             <h3 className={"text-2xl text-white antialiased font-bold"}>
                                 ‣ <span className={"pl-4"}>Work</span>
                             </h3>
@@ -42,7 +42,7 @@ export default function EducationWorkAndProjectSection(): JSX.Element {
                         <button
                             type={"button"}
                             onClick={(): void => changeCurrentData(CurrentData.PROJECTS)}
-                            className={"hover:border-b-2 text-white font-bold py-2 px-4 cursor-pointer hover:scale-110 transition-transform duration-150 transform-gpu"}>
+                            className={"border-b-2 border-b-transparent hover:border-b-2 hover:border-b-white text-white font-bold py-2 px-4 cursor-pointer transition-transform duration-150 transform-gpu"}>
                             <h3 className={"text-2xl text-white antialiased font-bold "}>
                                 ‣ <span className={"pl-4"}> Projects </span></h3>
                         </button>
@@ -64,16 +64,17 @@ export default function EducationWorkAndProjectSection(): JSX.Element {
                         <button
                             type={"button"}
                             onClick={(): void => changeCurrentData(CurrentData.WORK)}
-                            className={"hover:border-b-2 text-white font-bold py-2 px-4 cursor-pointer hover:scale-110 animation duration-100"}>
-                            <h3 className={"text-2xl text-white duration-100 antialiased font-bold "}>
-                                ‣ <span className={"pl-4"}>Work </span></h3>
+                            className={"hover:border-b-2 text-white font-bold py-2 px-4 cursor-pointer transition-transform duration-150 transform-gpu"}>
+                            <h3 className={"text-2xl text-white antialiased font-bold"}>
+                                ‣ <span className={"pl-4"}>Work</span>
+                            </h3>
                         </button>
                         <button
                             type={"button"}
                             onClick={(): void => changeCurrentData(CurrentData.PROJECTS)}
-                            className={"hover:border-b-2 text-white font-bold py-2 px-4 cursor-pointer hover:scale-110 animation duration-100"}>
-                            <h3 className={"text-2xl text-white duration-100 antialiased font-bold "}>
-                                ‣ <span className={"pl-4"}>Projects </span></h3>
+                            className={"border-b-2 border-b-transparent hover:border-b-2 hover:border-b-white text-white font-bold py-2 px-4 cursor-pointer transition-transform duration-150 transform-gpu"}>
+                            <h3 className={"text-2xl text-white antialiased font-bold "}>
+                                ‣ <span className={"pl-4"}> Projects </span></h3>
                         </button>
                     </div>
                     <section className={"w-full flex flex-col justify-center gap-8"}>

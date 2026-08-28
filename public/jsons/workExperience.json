@@ -2,7 +2,7 @@
   {
     "company": "Globodain",
     "companyLocation": "Seville, Spain",
-    "companyLogo": "https://www.globodain.com/logo.png",
+    "companyLogo": "/svgs/globodainCompanyLogo.svg",
     "companySiteUrl": "https://www.globodain.com",
     "position": "Software Developer (internship)",
     "startDate": "2025-05-01",

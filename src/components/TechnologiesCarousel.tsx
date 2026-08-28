@@ -2,6 +2,7 @@ import {type JSX} from "react";
 import type Technologies from "@/assets/data/technologies.ts";
 import technologiesData from "./../../public/jsons/technologies.json";
 import {Marquee} from "@/components/shadcn-space/animations/marquee.tsx";
+import SVGIcon from "@/components/SVGIcon.tsx";
 const technologies = technologiesData as Technologies[];
 
 export default function TechnologiesCarousel(): JSX.Element {
@@ -12,12 +13,13 @@ export default function TechnologiesCarousel(): JSX.Element {
                 {technologies.map((tech: Technologies): JSX.Element => (
                     <div
                         key={tech.name}
-                        className={"flex w-48 h-12 items-center justify-around gap-4 p-4 rounded-2xl border-2 border-gray-200" }>
-                        <img
-                            src={tech.icon}
-                            className={"w-6 h-6"}
-                            alt={tech.name}/>
-                        <h4 className="text-lg font-bold">{tech.name}</h4>
+                        className={"flex w-52 h-12 items-center justify-between gap-4 p-4 rounded-2xl"}
+                        style={{backgroundColor: tech.backgroundHex}}>
+                        <SVGIcon svgRoute={tech.icon} svgAlt={tech.name} hexIfMonochrome={tech.foregroundHex} svgWidth={"24px"} svgHeight={"24px"}/>
+                        <h4 className="text-lg font-bold"
+                            style={{color: tech.foregroundHex}}>
+                            {tech.name}
+                        </h4>
                     </div>
                 ))}
             </Marquee>

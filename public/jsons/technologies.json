@@ -1,52 +1,62 @@
 [
   {
     "name": "JavaScript",
-    "icon": "public/svgs/javascript.svg",
-    "hex":  "#F7DF1E"
+    "icon": "/svgs/javascript.svg",
+    "backgroundHex":  "#F7DF1E",
+    "foregroundHex": "#000000"
   },
   {
     "name": "TypeScript",
-    "icon": "public/svgs/typescript.svg",
-    "hex":  "#3178C6"
+    "icon": "/svgs/typescript.svg",
+    "backgroundHex":  "#3178C6",
+    "foregroundHex": "#FFFFFF"
   },
   {
     "name": "React",
-    "icon": "svgs/react.svg",
-    "hex":  "#61DAFB"
+    "icon": "/svgs/react.svg",
+    "backgroundHex":  "#61DAFB",
+    "foregroundHex": "#000000"
   },
   {
     "name": "React Native",
-    "icon": "svgs/react.svg",
-    "hex":  "#61DAFB"
+    "icon": "/svgs/react.svg",
+    "backgroundHex":  "#61DAFB",
+    "foregroundHex": "#000000"
   },
   {
     "name": "shadcn/ui",
-    "icon": "public/svgs/shadcnui.svg",
-    "hex":  "#000000"
+    "icon": "/svgs/shadcnui.svg",
+    "backgroundHex":  "#FFFFFF",
+    "foregroundHex": "#000000"
   },
   {
     "name": "Tailwind CSS",
-    "icon": "public/svgs/tailwindcss.svg",
-    "hex":  "#06B6D4"
+    "icon": "/svgs/tailwindcss.svg",
+    "backgroundHex":  "#06B6D4",
+    "foregroundHex": "#000000"
   },
   {
     "name": "Node.js",
-    "icon": "public/svgs/nodedotjs.svg",
-    "hex":  "#339933"
+    "icon": "/svgs/nodedotjs.svg",
+    "backgroundHex":  "#339933",
+    "foregroundHex": "#FFFFFF"
   },
   {
     "name": "Docker",
-    "icon": "public/svgs/docker.svg",
-    "hex":  "#2496ED"
+    "icon": "/svgs/docker.svg",
+    "backgroundHex":  "#2496ED",
+    "foregroundHex": "#FFFFFF"
   },
   {
     "name": "MariaDB",
-    "icon": "public/svgs/mariadb.svg",
-    "hex":  "#003545"
+    "icon": "/svgs/mariadb.svg",
+    "backgroundHex":  "#003545",
+    "foregroundHex": "#FFFFFF"
   },
   {
     "name": "MongoDB",
-    "icon": "public/svgs/mongodb.svg",
-    "hex":  "#47A248"
+    "icon": "/svgs/mongodb.svg",
+    "backgroundHex":  "#47A248",
+    "foregroundHex": "#FFFFFF"
   }
 ]
