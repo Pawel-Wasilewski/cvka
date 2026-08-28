@@ -2,7 +2,7 @@
   {
     "socialName": "GitHub",
     "socialProfileUrl": "https://github.com/Pawel-Wasilewski",
-    "socialIcon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-plain.svg"
+    "socialIcon": "public/svgs/github.svg"
   },
   {
     "socialName": "LinkedIn",
