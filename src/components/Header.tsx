@@ -1,11 +1,9 @@
 import type {JSX} from "react";
-/*
-import {parts} from "@/assets/data/cvParts.ts";
-import type CvPartsInterface from "@/assets/data/cvPartsInterface.ts";
- */
+import socialsData from "./../../public/jsons/socials.json";
 import ScreenSize from "@/assets/data/enums/screenSize.ts";
 import {getUserBrowserWidth} from "@/assets/helper_functions/userBrowser.ts";
-
+import type SocialsData from "@/assets/data/socialsData.ts";
+const socials: SocialsData[] = socialsData as SocialsData[];
 export default function Header(): JSX.Element {
 
     if (getUserBrowserWidth().valueOf() === ScreenSize.DESKTOP.valueOf()) {
@@ -15,23 +13,18 @@ export default function Header(): JSX.Element {
                     <h1 className={"text-2xl md:text-3xl font-bold antialiased"}> Paweł Wasilewski </h1>
                     <p className={"text-base md:text-lg antialiased"}> Software Developer </p>
                 </section>
-                {/*TODO make it unhidden if needed */}
-                {/* <nav className={"w-full flex flex-col justify-center hidden"}>
-                    {parts.map((part: CvPartsInterface, index: number): JSX.Element => (
-                        <div key={part.sectionId} className="flex items-start gap-4">
-                            <div className="flex flex-col items-center">
-                                <div className="w-4 h-4 rounded-full border-2 border-accent bg-accent" />
-                                {index !== parts.length - 1 && (
-                                    <div className="w-px flex-1 min-h-24 md:min-h-36 bg-gray-400" />
-                                )}
-                            </div>
-
-                            <a className="text-base md:text-lg leading-snug hover:animate-bounce duration-100 wrap-break-words" href={`#${part.sectionId}`}>
-                                {part.sectionName}
-                            </a>
-                        </div>
+                <nav className={"w-full flex flex-row items-center justify-start gap-4"}>
+                    {socials.map((social: SocialsData, index: number): JSX.Element => (
+                        <a
+                            key={index}
+                            href={social.socialProfileUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={"text-white hover:text-gray-400 transition-colors hover:scale-110 transform-gpu duration-300"}>
+                            <img src={social.socialIcon} alt={social.socialName} className={"w-6 h-6"}/>
+                        </a>
                     ))}
-                </nav> */}
+                </nav>
             </header>
         );
     } else {

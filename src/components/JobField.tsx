@@ -3,38 +3,35 @@ import type WorkExperienceData from "@/assets/data/workExperienceData.ts";
 
 export default function JobField(props: WorkExperienceData): JSX.Element {
     return (
-        <section className={"w-full h-full flex flex-col items-center justify-center"}>
-            <section className={"w-full flex flex-row"}>
-                <section className={"w-1/2 flex flex-row items-center justify-start"}>
-                    {props.companyLogo !== undefined ? (
-                        <img src={props.companyLogo!} alt="Company Logo" className={"w-16 h-16 object-contain"} />
-                    ) : (
-                        <img src={"https://upload.wikimedia.org/wikipedia/commons/e/ea/Image_placeholder.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"} alt="Company Logo" className={"w-16 h-16 object-contain"} />
-                    )}
-                    <h3 className={"text-lg font-bold text-white antialiased ml-4"}>
+        <section className={"w-full h-72 flex flex-row items-center justify-start rounded-2xl backdrop-blur-2xl transform-gpu will-change-transform"}>
+            <div className={"w-2 h-full bg-linear-to-b from-red-400 to-blue-500"} />
 
-                        {props.company}
-                    </h3>
-                </section>
-                <section className={"w-1/2 flex flex-row items-center justify-end"}>
+            <article className={"w-full h-full flex flex-col items-start justify-center gap-2 p-4"}>
+                <section className={"w-full flex flex-row items-center justify-between"}>
+                    <div className={"flex flex-row items-center justify-start gap-2 h-1/4"}>
+                        <a href={props.companySiteUrl!} target="_blank" rel="noopener noreferrer" className={"flex flex-row items-center justify-start gap-2"}>
+                            <img
+                                src={props.companyLogo!}
+                                className={"w-8 h-8 rounded-full"}
+                                alt={props.company}/>
+                            <h3 className={"text-lg font-bold text-white antialiased"}>
+                                {props.position} at {props.company}
+                            </h3>
+                        </a>
+                    </div>
                     <h4 className={"text-gray-300 antialiased"}>
-                        {props.position}<br/>
-                        {props.startDate} - {props.endDate}
+                        {props.startDate} - {props.endDate} <br/>
+                        {props.companyLocation}
                     </h4>
                 </section>
-            </section>
-            <h4 className={"text-gray-300 antialiased"}>
-                📍 {props.companyLocation}
-            </h4>
-            <article className={"w-full flex flex-col justify-between"}>
-                {props.responsibilities.map((responsibility: string, index: number): JSX.Element => (
-                    <section key={index} className={"w-full flex flex-row items-start gap-2"}>
-                        <span className={"font-bold bg-linear-to-r bg-clip-text text-transparent from-green-400 to-blue-500 antialiased"}>•</span>
-                        <p key={index} className={"text-gray-300 antialiased"}>
-                            {responsibility}
-                        </p>
-                    </section>
-                ))}
+                <section className={"w-full h-3/4 flex flex-col items-start justify-start gap-2"}>
+                    {props.responsibilities.map((responsibility, index) => (
+                        <article className={"flex flex-row items-start justify-start gap-2"} key={index}>
+                            <p className={"font-bold bg-linear-to-r bg-clip-text text-transparent from-red-400 to-blue-500"}> ● </p>
+                            <p className={"text-gray-200 antialiased text-justify"}>{responsibility}</p>
+                        </article>
+                    ))}
+                </section>
             </article>
         </section>
     );
