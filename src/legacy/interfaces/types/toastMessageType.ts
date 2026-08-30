@@ -1,1 +1,0 @@
-export type ToastMessageType = "success" | "error" | "warning" | "info";

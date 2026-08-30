@@ -13,8 +13,6 @@ Krótki projekt portfolio prezentujący:
 - TypeScript
 - Vite
 - Tailwind CSS
-- Zustand
-- Framer Motion / Motion
 - Lucide React + React Simple Icons
 
 ## Uruchomienie lokalne

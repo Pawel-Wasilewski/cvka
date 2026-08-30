@@ -1,1 +1,0 @@
-export type ProjectStatus = "In Progress" | "Completed" | "On hold";
