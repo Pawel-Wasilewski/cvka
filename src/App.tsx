@@ -25,12 +25,10 @@ function App(): JSX.Element {
     }
     else {
         return (
-            <ToastWrapper>
-                <section className={"w-screen min-h-screen flex lg:flex-row lg:justify-around flex-col sm:items-center md:items-center lg:items-start justify-start"}>
-                    <Header/>
-                    <MainContent/>
-                </section>
-            </ToastWrapper>
+            <section className={"w-screen min-h-screen flex lg:flex-row lg:justify-around flex-col sm:items-center md:items-center lg:items-start justify-start"}>
+                <Header/>
+                <MainContent/>
+            </section>
         )
     }
 }

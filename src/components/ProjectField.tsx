@@ -1,6 +1,7 @@
 import type ProjectStatusData from "@/assets/data/projectStatusData.ts";
 import type {JSX} from "react";
 import ProgressState from "@/assets/data/enums/progressState.ts";
+import {LinkIcon} from "lucide-react";
 
 export default function ProjectField(props: ProjectStatusData): JSX.Element {
     const statusLabel: JSX.Element = ((): JSX.Element => {
@@ -15,15 +16,16 @@ export default function ProjectField(props: ProjectStatusData): JSX.Element {
     })();
 
     return (
-        <section className={"w-full min-h-48 h-fit flex flex-row items-center justify-start rounded-2xl"}>
+        <section className={"w-full min-h-48 h-fit flex flex-row items-center justify-start animate-in fade-in slide-in-from-right-60 duration-1000"}>
             <div className={"w-2 self-stretch bg-linear-to-b from-green-400 to-blue-500"} />
 
-            <article className="w-full self-stretch flex flex-col items-start backdrop-blur-2xl justify-center gap-2 p-4">
+            <article className="w-full self-stretch flex flex-col items-start justify-center gap-2 p-4">
                 <section className={"w-full h-1/4 flex flex-row items-center justify-between"}>
-                    <a href={props.projectRepositoryURL!} target="_blank" rel="noopener noreferrer">
+                    <a href={props.projectRepositoryURL!} target="_blank" rel="noopener noreferrer" className={"flex w-fit flex-row items-center justify-start gap-2"}>
                         <h3 className={"text-lg font-bold text-white antialiased"}>
                             Project: {props.projectName}
                         </h3>
+                        {props.projectRepositoryURL !== null && <LinkIcon className={"w-4 h-4 text-gray-300"} />}
                     </a>
                     {statusLabel}
                 </section>
