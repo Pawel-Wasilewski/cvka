@@ -19,8 +19,8 @@ export default function TechnologiesCarousel(): JSX.Element {
                             svgRoute={tech.icon}
                             svgAlt={tech.name}
                             hexIfMonochrome={tech.foregroundHex}
-                            svgWidth={"24px"}
-                            svgHeight={"24px"}/>
+                            width={24}
+                            height={24}/>
                         <h4 className="text-lg font-bold"
                             style={{color: tech.foregroundHex}}>
                             {tech.name}
