@@ -1,0 +1,30 @@
+[
+  {
+    "projectName": "Gwint Calc",
+    "projectRepositoryURL": "https://github.com/Pawel-Wasilewski/gwintc",
+    "projectDescription": "A web / mobile written in React Native application that allows users to calculate the current score in the game of Gwent based on extracted data from the game.",
+    "projectTechnologies": [
+      "React Native",
+      "Tailwind CSS"
+    ],
+    "projectStatus": "In progress"
+  },
+  {
+    "projectName": "StoryTeller",
+    "projectRepositoryURL": "https://github.com/Pawel-Wasilewski/AIStoryTeller",
+    "projectDescription": "a desktop application written in MAUI which interact with Llama LLM thru Curl operations. It allows users to generate stories based on their input and preferences.",
+    "projectTechnologies": [
+      "MAUI"
+    ],
+    "projectStatus": "Done"
+  },
+  {
+    "projectName": "School official website",
+    "projectRepositoryURL": "https://www.zs10.zabrze.pl/",
+    "projectDescription": "a site made in Wordpress for my school. It is a simple site with information about the school, its history, and its current activities.",
+    "projectTechnologies": [
+      "Wordpress"
+    ],
+    "projectStatus": "Done"
+  }
+]
