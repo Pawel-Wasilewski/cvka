@@ -1,0 +1,14 @@
+[
+  {
+    "socialName": "GitHub",
+    "socialProfileUrl": "https://github.com/Pawel-Wasilewski",
+    "socialIcon": "/svgs/github.svg",
+    "iconHex": "#FFFFFF"
+  },
+  {
+    "socialName": "LinkedIn",
+    "socialProfileUrl": "https://www.linkedin.com/in/pawe%C5%82-wasilewski-b2604128a/",
+    "socialIcon": "/svgs/linkedin.svg",
+    "iconHex": "#FFFFFF"
+  }
+]

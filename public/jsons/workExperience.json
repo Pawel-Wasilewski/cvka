@@ -1,0 +1,32 @@
+[
+  {
+    "company": "Globodain",
+    "companyLocation": "Seville, Spain",
+    "companyLogo": "/svgs/globodainCompanyLogo.svg",
+    "companySiteUrl": "https://www.globodain.com",
+    "position": "Software Developer (internship)",
+    "startDate": "2025-05-01",
+    "endDate": "2025-05-31",
+    "responsibilities": [
+      "Team lead for AI focused service development, overseeing a team of 3 developers.",
+      "Developed and maintained back-end AI focused service using Python, SQL databases, and MongoDB.",
+      "Collaborated with cross-functional teams to define, design, and ship new features.",
+      "Implemented mongoDB compatibility and multi-database support for the application.",
+      "Participated in code reviews and provided constructive feedback to team members."
+    ]
+  },
+  {
+    "company": "Soft-K",
+    "companyLocation": "Gierałtowice, Poland",
+    "companyLogo": null,
+    "companySiteUrl": null,
+    "position": "Software Developer (internship)",
+    "startDate": "2025-11-01",
+    "endDate": "2025-11-31",
+    "responsibilities": [
+      "Developed and maintained full-stack applications using React, Node.js with Express, and MySQL (MariaDB).",
+      "Implemented robust back-end services and APIs to support front-end functionality.",
+      "Participated in code reviews and provided constructive feedback to senior developer."
+    ]
+  }
+]
