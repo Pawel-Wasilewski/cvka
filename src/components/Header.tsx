@@ -10,7 +10,7 @@ export default function Header(): JSX.Element {
 
     return (
         <header className={"w-full lg:min-w-1/4 min-h-full flex flex-col p-4 text-white"}>
-            <section className={"fixed top-0 left-0 m-4 animate-in fade-in slide-in-from-left-20 duration-700"}>
+            <section className={"sticky top-0 left-0 m-4 animate-in fade-in slide-in-from-left-20 duration-700"}>
                 <section className={"w-full flex flex-col mb-4 md:mb-6"}>
                     <h1 className={"text-2xl md:text-3xl font-bold antialiased"}> Paweł Wasilewski </h1>
                     <p className={"text-base md:text-lg antialiased"}> Software Developer </p>
